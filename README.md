@@ -1,1 +1,3 @@
-# fbla-2022-web-design
+# FBLA 2021-2022 Website Design
+
+John Paul Nguyen and James White
