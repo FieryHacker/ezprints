@@ -4,7 +4,7 @@
     	<meta charset="utf-8">
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-      <title>Title - SERVICES</title>
+      <title>EZ PRINTS - SERVICES</title>
       <meta content="" name="description">
       <meta content="" name="keywords">
 
@@ -39,16 +39,15 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="../index.html">Arsha</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="../index.html" class="logo me-auto"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="../index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="./about.html">About</a></li>
-          <li><a class="nav-link scrollto" href="./equipment.html">Equipment</a></li>
-          <li class="dropdown active"><a href=""><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="./about.html">About</a></li>
+          <li><a class="nav-link" href="./equipment.html">Equipment</a></li>
+          <li><a class="nav-link active" href="./packages.html">Services</a></li>
+          <li class="dropdown"><a href=""><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -65,7 +64,6 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="./contact.html">Contact</a></li>
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -75,25 +73,98 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section class="page-buffer">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Better Solutions For Your Business</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+  </section><!-- End Hero -->
+
+<div class="details-container">
+  <div class="page-details"><h1>Choose a service you want to explore</h1></div>
+</div>
+  <!-- Packages -->
+<div class="services align-items-center">
+    <div class="column" id="standard">
+      <div class="" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <div class="icon"><img src="../assets/img/standard.png"></div>
+          <h4>Standard Package</h4>
+          <p>Fresh off the printer and sent straight to you.</p>
         </div>
       </div>
     </div>
 
-  </section><!-- End Hero -->
+    <div class="column" id="silver">
+      <div class="" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <div class="icon"><img src="../assets/img/silver.png"></div>
+          <h4>Silver Package</h4>
+          <p>Just a bit of decoration to go with your project</p>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="column" id="gold">
+    <div class="" data-aos="zoom-in" data-aos-delay="300">
+      <div class="icon-box">
+        <div class="icon"><img src="../assets/img/gold.png"></div>
+        <h4>Gold Package</h4>
+        <p>The whole package, including the cherry on top</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="package-selection">
+
+      <select>
+        <option value="">Select a Service</option>
+        <option value="one">Silver Package</option>
+        <option value="two">Gold Package</option>
+        <option value="three">Platinum Package</option>
+      </select>
+      <span class="custom-arrow"></span>
+
+  </div>
+
+  <div class="selected-package" data-aos="zoom-in" data-aos-delay="100">
+    <div class="standard" id="selected-standard">
+      <div class="container">
+        <h1>THE STANDARD PACKAGE</h1>
+      </div>
+      <div class="details-container">
+        <h2>Price:</h2>
+        <p>$50.00 / kg of printer filament + $15 / lb shipping fee</p>
+        <br>
+        <h2>Description:</h2>
+        <p>shesh</p>
+      </div>
+    </div>
+    <div class="silver" id="selected-silver">
+      <div class="container">
+        <h1>THE SILVER PACKAGE</h1>
+      </div>
+      <div class="details-container">
+        <h2>Price:</h2>
+        <p>$60.00 / kg of printer filament + $15 / lb shipping fee</p>
+        <br>
+        <h2>Description:</h2>
+        <p>shesh</p>
+      </div>
+    </div>
+    <div class="gold" id="selected-gold">
+      <div class="container">
+        <h1>THE GOLD PACKAGE</h1>
+      </div>
+      <div class="details-container">
+        <h2>Price:</h2>
+        <p>$60.00 / kg of printer filament + $15 / lb shipping fee</p>
+        <br>
+        <h2>Description:</h2>
+        <p>shesh</p>
+      </div>
+    </div>
+    </div>
+  </div>
 
   <footer id="footer">
 
@@ -102,7 +173,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Arsha</h3>
+            <img src="../assets/img/logo footer.png" alt="" class="img-fluid">
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
@@ -119,18 +190,16 @@
               <li><i class="bx bx-chevron-right"></i> <a href="./about.html">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="./packages.html">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="./equipment.html">What we use</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="./contact.html">Contact us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="./copyright.html">Copyright</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Contact Us!</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">FAQ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Send Your Idea</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Schedule a Meeting</a></li>
             </ul>
           </div>
 
@@ -141,8 +210,6 @@
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -152,7 +219,7 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>EZ Prints</span></strong> - Egg Harbor Township High School for educational purposes only
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -177,5 +244,6 @@
     <script src="../assets/vendor/php-email-form/validate.js"></script>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/packages.js"></script>
     </body>
 </html>
