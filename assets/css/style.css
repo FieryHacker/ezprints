@@ -27,6 +27,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Jost", sans-serif;
 }
 
+.details-container {
+    width: 90%;
+    margin: auto;
+    display: table;
+    border-bottom-style: solid;
+    border-bottom-color: #37517e;
+    border-bottom-width: 4px;
+}
+
+.details-container, .page-details {
+   padding: 30px;
+   position: relative;
+}
+
+.page-details {
+   display: table;
+   margin: 0 auto;
+}
+
+.page-details h1 {
+  text-align: center;
+}
+
+.page-buffer {
+  height: 20vh;
+  background: #37517e;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -134,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -238,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -571,6 +599,160 @@ section {
   text-decoration: none;
 }
 
+.timeline {
+  max-width: 1080px;
+  margin: auto;
+  padding:  20px;
+  position: relative;
+  overflow: visible;
+}
+
+.timeline .center-line {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #37517e;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+
+}
+
+.rows section .icon, .center-line .scroll-icon, .center-line .icon {
+  position: absolute;
+  background: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #37517e;
+  font-size: 17px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+}
+
+.center-line .scroll-icon {
+  bottom: 0px;
+  left: 50%;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+
+.timeline .rows {
+  display: flex;
+
+}
+
+.timeline .rows section {
+  background: #fff;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+  overflow: visible;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #37517e;
+}
+
+.timeline .rows section::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #37517e;
+  top: 28px;
+
+  transform: rotate(45deg);
+  overflow: visible;
+}
+
+.timeline .row-left {
+  justify-content: flex-start;
+}
+
+.timeline .center-line .icon {
+  top: 15px;
+}
+
+.timeline .row-left section .icon {
+  top: 15px;
+  right: -60px
+}
+
+.timeline .row-left section::before {
+  right: -7px;
+}
+
+.timeline .row-right {
+  justify-content: flex-end;
+}
+
+.timeline .row-right section .icon {
+  top: 15px;
+  left: -60px;
+}
+
+.timeline .row-right section::before {
+  left: -7px;
+}
+
+.rows section .details .title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.rows section p {
+  margin: 10px 0 17px 0;
+}
+
+.rows section .bottom a {
+  text-decoration: none;
+  background: #37517e;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.rows section .bottom a:hover {
+  transform: scale(0.97);
+}
+
+.rows section .details, .rows section .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(max-width: 790px){
+  .timeline .center-line{
+    left: 40px;
+  }
+  .timeline .rows{
+    margin: 30px 0 3px 60px;
+  }
+  .timeline .rows section{
+    width: 100%;
+  }
+  .row-left section::before{
+    left: -7px;
+  }
+  .row-left section .icon{
+    left: -60px;
+  }
+}
+@media(max-width: 440px){
+  .timeline .center-line,
+  .rows section::before,
+  .rows section .icon{
+    display: none;
+  }
+  .timeline .rows{
+    margin: 10px 0;
+  }
+}
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
@@ -731,30 +913,53 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Equipment
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services {
+  margin: 1%;
+  padding: 1%;
+  overflow: hidden;
+}
+.services .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+.services .column {
+  float: left;
+  width: 33%;
+  padding: 0px 20px 20px 20px;
+  margin: 0;
+}
+
 .services .icon-box {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   background: #fff;
+  margin-top: 10%;
+  cursor: pointer;
 }
 .services .icon-box .icon {
   margin-bottom: 10px;
 }
-.services .icon-box .icon i {
-  color: #47b2e4;
-  font-size: 36px;
+.services .icon-box .icon img {
+  height: auto;
+  width: 33%;
   transition: 0.3s;
 }
 .services .icon-box h4 {
   font-weight: 500;
   margin-bottom: 15px;
   font-size: 24px;
-}
-.services .icon-box h4 a {
-  color: #37517e;
-  transition: ease-in-out 0.3s;
 }
 .services .icon-box p {
   line-height: 24px;
@@ -768,49 +973,126 @@ section {
   color: #47b2e4;
 }
 
-/*--------------------------------------------------------------
-# Cta
---------------------------------------------------------------*/
-.cta {
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
-  background-size: cover;
-  padding: 120px 0;
+.package-selection select {
+  border-radius: 5px;
+  font-size: 1.5rem;
+  padding: 1em 6em 1em 1.5em;
+  background: rgba(212, 212, 212, 0.7);
+  font-family: "Jost";
+  border: 0;
+  width: 100%;
 }
-.cta h3 {
-  color: #fff;
-  font-size: 28px;
-  font-weight: 700;
+
+.package-selection {
+  position: relative;
+  margin: 5rem;
+  display: none;
 }
-.cta p {
-  color: #fff;
+
+.custom-arrow {
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+
+  background: rgba(166, 233, 255);
+  width: 4rem;
+  height: 100%;
+  pointer-events: none;
 }
-.cta .cta-btn {
-  font-family: "Jost", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid #fff;
-  color: #fff;
+
+.custom-arrow::before,
+.custom-arrow::after {
+  --size: .6em;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.cta .cta-btn:hover {
-  background: #47b2e4;
-  border: 2px solid #47b2e4;
+
+.custom-arrow::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid rgba(15, 70, 153);
+  top: 40%;
 }
-@media (max-width: 1024px) {
-  .cta {
-    background-attachment: scroll;
+
+.custom-arrow::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid rgba(15, 70, 153);
+  top: 60%;
+}
+
+.selected-package {
+  margin: 2rem;
+
+  position: relative;
+}
+
+.selected-package .container {
+  max-width: 25%;
+
+}
+
+.selected-package .container h1 {
+  font-size: 2vw;
+
+}
+
+.selected-package .details-container {
+  max-width: 100%;
+  border-left-style: solid;
+  border-left-color: #283733;
+  border-bottom-style: none;
+}
+
+.selected-package .details-container h2 {
+  font-size: 2vw;
+}
+
+.selected-package .details-container p {
+  font-size: 1.5vw;
+}
+
+.selected-package .standard,
+.selected-package .silver,
+.selected-package .gold {
+  padding: 5rem;
+}
+
+.selected-package .standard {
+  border-radius: 10px;
+  border-color: #855200;
+  border-style: solid;
+  display: none;
+}
+
+.selected-package .silver {
+  border-radius: 10px;
+  border-color: #858585;
+  border-style: solid;
+  display: none;
+}
+
+.selected-package .gold {
+  border-radius: 10px;
+  border-color: #f0c400;
+  border-style: solid;
+  display: none;
+}
+
+@media screen and (max-width: 1160px) {
+  .services {
+    display: none;
   }
-}
-@media (min-width: 769px) {
-  .cta .cta-btn-container {
+  .package-selection {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
   }
 }
 
