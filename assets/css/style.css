@@ -916,7 +916,93 @@ section {
 # Equipment
 --------------------------------------------------------------*/
 
+.equipment {
+  margin: 3rem;
+}
 
+.equipment .row-full {
+  display: flex;
+}
+
+.equipment .row-half {
+  margin:auto;
+  width: 60%;
+}
+
+.equipment .row-full .column,
+.equipment .row-half .column {
+  box-shadow: 5px 2px 3px #616161;
+  width: 50%;
+  margin: 3vw;
+  padding: 1vw;
+  border-style: solid;
+  border-color: #616161;
+  border-radius: 5px;
+  display: flex;
+}
+
+.equipment .row-half .column {
+  width: 90%;
+}
+
+.equipment .content-column {
+  display: flex;
+  padding: 1.5vw;
+}
+
+.equipment .content-column img {
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+}
+
+.equipment .content-column h1 {
+
+}
+
+.equipment .cborder {
+  border-left-style: solid;
+  border-left-color: #616161;
+  border-left-width: 5px;
+}
+
+.process-steps {
+
+}
+
+.process-steps .page-details {
+  text-align: center;
+}
+
+.process-steps .step {
+  margin: 3rem;
+}
+
+.process-steps .step-title {
+  margin-bottom: 1rem;
+}
+
+.process-steps .step-details {
+  display: flex;
+  overflow: hidden;
+}
+
+.process-steps .step-details p {
+  width: 75%;
+}
+
+.process-steps .step-details .img-container {
+  width: 25%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.process-steps .step-details .img-container img {
+  width: 10vw;
+  height: 10vw;
+
+}
 
 /*--------------------------------------------------------------
 # Services
@@ -1653,6 +1739,15 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*--------------------------------------------------------------
+# Copyright
+--------------------------------------------------------------*/
+
+.copyright {
+  margin: 4vw;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
