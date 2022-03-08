@@ -11,6 +11,12 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {
@@ -702,8 +708,30 @@ section {
   font-weight: 600;
 }
 
-.rows section p {
+.rows section .about-paragraph {
   margin: 10px 0 17px 0;
+  height: 200px;
+  overflow: hidden;
+}
+
+.rows section.active .about-paragraph {
+  height: auto;
+}
+
+
+.rows section .about-paragraph::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(transparent, #ffffff);
+  pointer-events: none;
+}
+
+.rows section.active .about-paragraph::before {
+  display: none;
 }
 
 .rows section .bottom a {
@@ -716,8 +744,17 @@ section {
   transition: all 0.3s ease;
 }
 
+.rows section .bottom a::before {
+  content: 'Read More';
+}
+
+.rows section.active .bottom a::before {
+  content: 'Read Less';
+}
+
 .rows section .bottom a:hover {
   transform: scale(0.97);
+  cursor: pointer;
 }
 
 .rows section .details, .rows section .bottom {
@@ -946,14 +983,12 @@ section {
 }
 
 .equipment .content-column {
-  display: flex;
   padding: 1.5vw;
 }
 
 .equipment .content-column img {
   height: 10vw;
   width: 10vw;
-  border-radius: 50%;
 }
 
 .equipment .content-column h1 {
@@ -975,7 +1010,7 @@ section {
 }
 
 .process-steps .step {
-  margin: 3rem;
+  margin: 2rem 10rem;
 }
 
 .process-steps .step-title {
@@ -1570,6 +1605,176 @@ section {
   .faq .faq-list {
     padding: 0;
   }
+}
+
+/*--------------------------------------------------------------
+# Idea Form
+--------------------------------------------------------------*/
+
+.idea-container {
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
+}
+.idea-container header {
+  font-size: 35px;
+  font-weight: 600;
+}
+.idea-container .form-outer{
+  width: 500px;
+  overflow: hidden;
+  margin: 40px auto;
+}
+.idea-container .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.idea-container form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.idea-container form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.idea-container form .page .field{
+  width: 500px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+.idea-container form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+.idea-container form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+.idea-container form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.idea-container form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #d33f8d;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+.idea-container form .page .field button:hover{
+  background: #000;
+}
+.idea-container form .page .btns button{
+  margin-top: -20px!important;
+}
+.idea-container form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+.idea-container form .page .btns button.next{
+  margin-left: 3px;
+}
+.idea-container  .idea-progress-bar{
+  display: flex;
+  margin: 40px auto;
+  user-select: none;
+  overflow: hidden;
+  width: 330px;
+}
+.idea-container .idea-progress-bar .step{
+  text-align: center;
+  width: 25%;
+  position: relative;
+}
+.idea-container .idea-progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.idea-container .idea-progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.idea-container .idea-progress-bar .step .bullet.active{
+  border-color: #d43f8d;
+  background: #d43f8d;
+}
+.idea-container .idea-progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.idea-container .idea-progress-bar .step .bullet.active span{
+  display: none;
+}
+.idea-container .idea-progress-bar .step .bullet:before,
+.idea-container .idea-progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+.idea-container .idea-progress-bar .step .bullet.active:after{
+  background: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.idea-container .idea-progress-bar .step:last-child .bullet:before,
+.idea-container .idea-progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.idea-container .idea-progress-bar .step p.active{
+  color: #d43f8d;
+  transition: 0.2s linear;
+}
+.idea-container .idea-progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.idea-container .idea-progress-bar .step .check.active{
+  display: block;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
