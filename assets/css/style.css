@@ -369,7 +369,8 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: #37517e;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,  url("../img/about.jpg");
+
 }
 #hero .container {
   padding-top: 72px;
@@ -400,7 +401,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #47b2e4;
 }
 #hero .btn-get-started:hover {
-  background: #209dd8;
+  background: #2095d8
 }
 #hero .btn-watch-video {
   font-size: 16px;
@@ -1039,6 +1040,40 @@ section {
 
 }
 
+.process-steps .icon {
+  font-size: 80px;
+}
+
+@media screen and (max-width: 1000px) {
+  .equipment {
+    margin: 1vw 5px;
+  }
+  .equipment .row-full {
+    display: block;
+  }
+  .equipment .row-full .column,
+  .equipment .row-half,
+  .equipment .row-half .column {
+    display: block;
+    width: 100%;
+    margin: 9px 0;
+    box-shadow: none;
+  }
+  .equipment .content-column img {
+    height: 50vw;
+    width: 50vw;
+  }
+  .process-steps .page-details h2 {
+    font-size: 18px;
+  }
+  #process-header {
+    padding: 0;
+  }
+  .process-steps .step {
+    margin: 2rem 2rem;
+  }
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -1094,7 +1129,8 @@ section {
   color: #47b2e4;
 }
 
-.package-selection select {
+.package-selection select,
+.package-selection-idea select {
   border-radius: 5px;
   font-size: 1.5rem;
   padding: 1em 6em 1em 1.5em;
@@ -1108,6 +1144,11 @@ section {
   position: relative;
   margin: 5rem;
   display: none;
+}
+
+.package-selection-idea {
+  position: relative;
+
 }
 
 .custom-arrow {
@@ -1214,6 +1255,20 @@ section {
   }
   .package-selection {
     display: flex;
+    margin: 1rem;
+  }
+  .details-container {
+    padding: 3px 0;
+  }
+  .package-selection select {
+    height: 50px;
+    padding: 0.25em 4em 0.25em 1em
+  }
+  .custom-arrow::before, .custom-arrow::after {
+    --size: .4em;
+  }
+  .selected-package .container {
+    max-width: 100%;
   }
 }
 
@@ -1622,7 +1677,7 @@ section {
   font-weight: 600;
 }
 .idea-container .form-outer{
-  width: 500px;
+  width: 1000px;
   overflow: hidden;
   margin: 40px auto;
 }
@@ -1640,7 +1695,7 @@ section {
   font-weight: 500;
 }
 .idea-container form .page .field{
-  width: 500px;
+  width: 1000px;
   height: 45px;
   margin: 45px 0;
   display: flex;
@@ -1669,7 +1724,7 @@ section {
   width: 100%;
   height: calc(100% + 5px);
   border: none;
-  background: #d33f8d;
+  background: #47b2e4;
   margin-top: -20px;
   border-radius: 5px;
   color: #fff;
@@ -1724,8 +1779,8 @@ section {
   line-height: 25px;
 }
 .idea-container .idea-progress-bar .step .bullet.active{
-  border-color: #d43f8d;
-  background: #d43f8d;
+  border-color: #47b2e4;
+  background: #47b2e4;
 }
 .idea-container .idea-progress-bar .step .bullet span{
   position: absolute;
@@ -1746,7 +1801,7 @@ section {
   background: #262626;
 }
 .idea-container .idea-progress-bar .step .bullet.active:after{
-  background: #d43f8d;
+  background: #47b2e4;
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 0.3s linear forwards;
@@ -2026,7 +2081,7 @@ section {
 #footer .footer-newsletter form input[type=email] {
   border: 0;
   padding: 4px 8px;
-  width: calc(100% - 100px);
+  width: calc(100% - 110px);
 }
 #footer .footer-newsletter form input[type=submit] {
   position: absolute;
